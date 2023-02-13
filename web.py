@@ -13,7 +13,7 @@ st.title("My todo APP")
 
 
 for index, todo in enumerate(todos):
-    checkbox = st.checkbox(todo, key=todo)
+    checkbox = st.checkbox(f"{index + 1} - {todo}", key=todo)
     if checkbox:
         todos.pop(index)
         functions.write_todos(todos)
